@@ -1,11 +1,93 @@
-*{
- margin:0;
-padding:0;
-box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
 }
 
-html, body{
-width:100%;
-height:100%;
-font-family: 'Segoe ui', Tahoma, Geneva, Verdana, sans-serif;
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  font-family: "Segoe ui", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background-color: #4f5050;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+main .left,
+main .right {
+  height: 100%;
+  flex-basis: 50%;
+  border-radius: 0.8rem;
+}
+
+main .left {
+  background-color: #000;
+  position: relative;
+}
+
+.code {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.8rem;
+}
+.code pre.language-javascript {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: transparent;
+  padding: 1rem;
+}
+
+pre.language-javascript code.language-javascript {
+  height: 100%;
+  width: 100%;
+  text-align: left;
+}
+
+main .left .review {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+  border-radius: 0.7rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+main .right {
+  background-color: #191919;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 1.2rem 1.3rem;
+  overflow: auto;
+  
+}
+
+/* For Chrome, Edge, Safari */
+main .right::-webkit-scrollbar {
+  width: 6px;
+}
+
+main .right::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+main .right::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 10px;
 }
